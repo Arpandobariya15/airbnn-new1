@@ -96,26 +96,40 @@ const SearchButton = styled.div`
 `;
 
 const Home = () => {
+  const [location , setLocation]= useState("");
+  const [checkInDate , setCheckInDate]= useState("")
+  const [checkOutDate , setCheckOutDate]= useState("")
+  const navigate = useNavigate();
+  const handleSearchClick = ()=>{
+    navigate ("/properties",{
+      state:{location,checkInDate,checkOutDate}
+    })
+  }
+
   return <Container>
     <SearchContainer>
       <LocationWrapper>
         <Title>Location</Title>
-        <Desc placeholder="Where are you Looking?" type="text"/>
+        <Desc placeholder="Where are you Looking?" type="text" value={location} onChange={(e)=>setLocation(e.target.value)}/>
       </LocationWrapper>
 
       <CheckOutWrapper>
         <Title>Check in Date</Title>
-        <Desc placeholder="Start date" type="date"/>
+        <Desc placeholder="Start date" type="date" value={checkInDate} onChange={(e)=>setCheckInDate(e.target.value)}/>
       </CheckOutWrapper>
 
       <CheckOutWrapper>
         <Title>Check out Date</Title>
-        <Desc placeholder="End date" type="date"/>
+        <Desc placeholder="End date" type="date"value={checkOutDate} onChange={(e)=>setCheckOutDate(e.target.value)}/>
       </CheckOutWrapper>
-      <CheckOutWrapper>
-        <Title>Check out Date</Title>
-        <Desc placeholder="End date" type="date"/>
-      </CheckOutWrapper>
+      <SearchWrapper>
+        <SearchButton onClick={handleSearchClick}>
+          <SearchRounded sx={{color:"white", fontSize :"30px"}}/>
+        </SearchButton>
+
+      </SearchWrapper>
+
+      
     </SearchContainer>
     
   </Container>;

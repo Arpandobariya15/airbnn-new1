@@ -161,7 +161,7 @@ const Navbar = ({setOpenAuth, openAuth}) => {
           <Navlink to="/" onClick={() => setIsOpen(!isOpen)}>
             Home
           </Navlink>
-          <Navlink to="/properties" >Places</Navlink>
+          <Navlink to="/properties" >Property</Navlink>
           <Navlink to="/contact" >Contact</Navlink>
           <Navlink to="/info" >Info</Navlink>
           <div style={{flex: 1,display: "flex",gap:"12px"}}>
