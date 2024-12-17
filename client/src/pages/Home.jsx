@@ -112,7 +112,12 @@ const Home = () => {
         <Title>Check out Date</Title>
         <Desc placeholder="End date" type="date"/>
       </CheckOutWrapper>
+      <CheckOutWrapper>
+        <Title>Check out Date</Title>
+        <Desc placeholder="End date" type="date"/>
+      </CheckOutWrapper>
     </SearchContainer>
+    
   </Container>;
 };
 
