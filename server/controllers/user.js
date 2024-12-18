@@ -1,5 +1,5 @@
-import User from "../models/user.js";
-import properties from "../models/properties.js";
+import User from "../models/user.js"
+import properties from "../models/properties";
 import { createError } from './../error';
 import dotenv from "dotenv";
 import bcrypt from "bcrypt";
