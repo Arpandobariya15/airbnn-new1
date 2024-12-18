@@ -75,8 +75,7 @@ const BookingContainer = styled.div`
 `;
 
 const PropertyDetails = () => {
-  const property = [
-    {
+  const property = {
       _id: "12345",
       img: "https://via.placeholder.com/250",
       title: "Beautiful Beach House",
@@ -87,10 +86,9 @@ const PropertyDetails = () => {
         mrp: 300,
         off: 17,
       },
-    },
+    }
+  
     
-    
-  ];
 
   return <Container>
     <Image src={property?.img}/>
@@ -106,13 +104,14 @@ const PropertyDetails = () => {
         <span>({property?.rating})</span>
       </RatingContainer>
       <BookingContainer>
-        <DatePicker label="Start Date" renderInput={(params)=><TextField{...params}/>}/>
-        <DatePicker label="End Date" renderInput={(params)=><TextField{...params}/>}/>
+        <DatePicker label="Start Date" renderInput={(params)=> 
+          <TextField{...params}/>}/>
+        <DatePicker label="End Date" renderInput={(params)=> <TextField{...params}/>}/>
         <Button
           variant="contained"
           color="secondary"
-          onClick={handleBooking}
-          disabled={loading}
+          // onClick={handleBooking}
+          // disabled={loading}
           text="Book Now"
         ></Button>
       </BookingContainer>

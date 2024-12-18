@@ -153,7 +153,7 @@ const PropertyCard = ({property}) => {
         <Rating value={property?.rating}sx={{fontSize:"14px",}}/>
       </Rate>
     </Top>
-    <Details onClick={()=>navigate(`/properties/${property?.id}`)}>
+    <Details onClick={()=>navigate(`/properties/${property?._id}`)}>
       <Title>{property?.title}</Title>
       <Desc>{property?.desc}</Desc>
       <Location>{property?.location}</Location>
